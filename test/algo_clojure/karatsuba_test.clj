@@ -16,4 +16,10 @@
     (is (= 15241578750190521 (k-multiply 123456789 123456789))))
 
   (testing "numbers of different lengths (123456789 * 1234)"
-    (is (= 152345677626 (k-multiply 123456789 1234)))))
+    (is (= 152345677626 (k-multiply 123456789 1234))))
+
+  (testing "one negative number (-1234 * 1234)"
+    (is (= -1522756 (k-multiply (- 1234) 1234))))
+
+  (testing "two negative numbers (-1234 * -1234)"
+    (is (= 1522756 (k-multiply (- 1234) (- 1234))))))
